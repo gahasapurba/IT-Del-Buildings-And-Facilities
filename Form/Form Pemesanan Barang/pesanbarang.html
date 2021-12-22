@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>IT Del - Buildings and Facilities (Pemesanan Barang)</title>
+
+  <link rel="stylesheet" href="../../Source/Bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="pesanbarang.css">
+</head>
+
+<body>
+  <!-- Login -->
+  <section class="pesan mt-4" id="pesan">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col text-center">
+          <h2>Form Pemesanan Barang</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card text-white mb-3 pt-3 pb-3 text-center">
+            <img src="Images/logo.png" alt="Logo IT Del">
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h1>Alamat</h1>
+            </li>
+            <li class="list-group-item">Institut Teknologi Del</li>
+            <li class="list-group-item">Jl. P.I. Del, Sitoluama, Lagu Boti, Kabupaten Toba Samosir, Sumatera Utara 22381
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 ">
+          <form>
+            <div class="form-group">
+              <label for="nama">Nama Lengkap</label>
+              <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Lengkap">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Masukkan Email">
+            </div>
+            <div class="form-group">
+              <label for="telepon">No.Telepon</label>
+              <input type="tel" class="form-control" id="telepon" placeholder="Masukkan No.Telepon">
+            </div>
+            <div class="form-group">
+              <label for="jenisbarang">Jenis Barang</label>
+              <select id="jenisbarang" class="form-control">
+                <option selected>Fasilitas Akademik</option>
+                <option>Fasilitas Olahraga</option>
+                <option>Fasilitas Transportasi</option>
+                <option>Fasilitas Kantin</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="deskripsibarang">Deskripsi Barang</label>
+              <textarea class="form-control" id="deskripsibarang" placeholder="Masukkan Deskripsi Barang"
+                rows="5"></textarea>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn utama" onclick="gahasa()">Pesan</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Akhir Login -->
+
+  <!-- Javascript -->
+  <script src="../../Source/Jquery/jquery-3.4.1.min.js"></script>
+  <script src="../../Source/Bootstrap/js/bootstrap.min.js"></script>
+  <script src="../../Source/Bootstrap/js/bootstrap-validate.js"></script>
+  <script src="pesanbarang.js"></script>
+  <!-- Akhir Javascript -->
+</body>
+
+</html>

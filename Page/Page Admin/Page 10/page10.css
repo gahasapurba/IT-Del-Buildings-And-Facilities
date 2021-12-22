@@ -1,0 +1,144 @@
+/* Utilities */
+
+@font-face {
+	font-family: 'montserratregular';
+	src: url('../../../Source/Font/montserrat-regular-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	position: relative;
+}
+
+body {
+	margin-bottom: 100px;
+	background-image: url('Images/background.png');
+	font-family: 'montserratregular';
+}
+
+hr {
+	width: 300px;
+	border-width: 5px;
+	border-color: grey;
+}
+
+section {
+	min-height: 800px;
+}
+
+/* Akhir Utilities */
+
+/* Navbar */
+
+.navbar {
+	background-color: #441768;
+}
+
+.navbar-brand img {
+	width: 30px;
+	height: 30px;
+}
+
+.navbar-brand,
+.nav-link {
+	color: white !important;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.nav-link:hover::after {
+	content: '';
+	display: block;
+	border-bottom: 3px solid #0079C2;
+	width: 50%;
+	margin: auto;
+	padding-bottom: 5px;
+	margin-bottom: -8px;
+}
+
+.dropdown-menu {
+	background-color: #0079C2;
+}
+
+.dropdown-item {
+	color: white;
+}
+
+.dropdown-item:hover {
+	background-color: #441768;
+	color: white;
+}
+
+/* Akhir Navbar */
+
+/* Jumbotron */
+
+.jumbotron {
+	padding-top: 120px;
+	background-image: url('Images/backgroundjumbotron.png');
+	position: relative;
+	color: white;
+	overflow: hidden;
+	border-bottom: 15px solid #ffc400;
+}
+
+.jumbotron .container {
+	z-index: 1;
+	position: relative;
+}
+
+.jumbotron img {
+	width: 210px;
+	height: 230px;
+}
+
+.jumbotron h1,
+.jumbotron h4 {
+	text-shadow: 3px 3px 10px black;
+}
+
+.jumbotron .display-4 span {
+	font-weight: bold;
+}
+
+/* Akhir Jumbotron */
+
+/* About Us */
+
+.aboutus {
+	position: relative;
+}
+
+/* Akhir About Us */
+
+/* Footer */
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background-color: #441768;
+}
+
+footer p {
+	font-size: 20px;
+	color: white;
+}
+
+/* Akhir Footer */
+
+/* Transform Animasi */
+
+.aboutus .card {
+	opacity: 0;
+	transform: translate(0, -40px);
+	transition: .5s;
+}
+
+.aboutus .card.muncul {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+/* Akhir Transform Animasi */

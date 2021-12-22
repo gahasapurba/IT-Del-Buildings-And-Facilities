@@ -1,0 +1,337 @@
+/* Utilities */
+
+@font-face {
+	font-family: 'montserratregular';
+	src: url('../../../Source/Font/montserrat-regular-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	position: relative;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin-bottom: 100px;
+	background-image: url('Images/background.png');
+	font-family: 'montserratregular';
+}
+
+hr {
+	width: 300px;
+	border-width: 5px;
+	border-color: grey;
+}
+
+section {
+	min-height: 800px;
+}
+
+/* Akhir Utilities */
+
+/* Navbar */
+
+.navbar {
+	background-color: #441768;
+}
+
+.navbar-brand img {
+	width: 30px;
+	height: 30px;
+}
+
+.navbar-brand,
+.nav-link {
+	color: white !important;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.nav-link:hover::after {
+	content: '';
+	display: block;
+	border-bottom: 3px solid #0079C2;
+	width: 50%;
+	margin: auto;
+	padding-bottom: 5px;
+	margin-bottom: -8px;
+}
+
+.dropdown-menu {
+	background-color: #0079C2;
+}
+
+.dropdown-item {
+	color: white;
+}
+
+.dropdown-item:hover {
+	background-color: #441768;
+	color: white;
+}
+
+/* Akhir Navbar */
+
+/* Jumbotron */
+
+.jumbotron {
+	padding-top: 120px;
+	height: 600px;
+	background-image: url('Images/backgroundjumbotron.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 0 -300px;
+	position: relative;
+	color: white;
+	overflow: hidden;
+}
+
+.jumbotron::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 80%;
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+	position: absolute;
+	bottom: 0;
+}
+
+.jumbotron .container {
+	z-index: 1;
+	position: relative;
+}
+
+.jumbotron img {
+	width: 210px;
+	height: 230px;
+}
+
+.jumbotron h1,
+.jumbotron h4 {
+	text-shadow: 3px 3px 10px black;
+}
+
+.jumbotron .display-4 span {
+	font-weight: bold;
+}
+
+/* Akhir Jumbotron */
+
+.tentang .karosel {
+	box-shadow: 0 8px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.aboutitdel h1 {
+	text-shadow: 3px 3px 15px black;
+}
+
+/* Portfolio */
+
+.portfolio {
+	position: relative;
+}
+
+.card {
+	border: 2px solid grey;
+}
+
+.card a img {
+	transition: 0.3s;
+}
+
+.card a img:hover {
+	box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Akhir Portfolio */
+
+/* Footer */
+
+footer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 100px;
+	background-color: #441768;
+}
+
+footer p {
+	font-size: 20px;
+	color: white;
+}
+
+/* Akhir Footer */
+
+/* Transform Animasi */
+
+.tentang .karosel {
+	opacity: 0;
+	transform: translate(0, -40px);
+	transition: .5s;
+}
+
+.tentang .karosel.muncul {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+.aboutitdel .kepala {
+	opacity: 0;
+	transform: translate(0, -40px);
+	transition: .5s;
+}
+
+.aboutitdel .kepala.muncul {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+.tulisan .par {
+	opacity: 0;
+	transform: translate(0, -40px);
+	transition: .5s;
+}
+
+.tulisan .par.muncul {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+.portfolio .card {
+	opacity: 0;
+	transform: translate(0, -40px);
+	transition: .5s;
+}
+
+.portfolio .card.muncul {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+/* Akhir Transform Animasi */
+
+/* Overlay */
+
+.overlay {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 9999;
+	transition: 0.5s;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	padding: 50px 0px;
+	text-align: center;
+}
+
+.overlay .close {
+	position: absolute;
+	top: 5px;
+	left: 84.9%;
+	background-color: black;
+	color: white;
+	padding: 5px;
+	border: 3px solid white;
+	text-decoration: none;
+	opacity: 0;
+}
+
+.overlay:target {
+	width: auto;
+	height: auto;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+.overlay:target img {
+	animation: zoomdanfade 0.8s;
+}
+
+.overlay:target .close {
+	animation: slidedownfade .8s forwards;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+	animation: fade 1s forwards;
+}
+
+.overlay img {
+	max-height: 100%;
+	box-shadow: 0px 0px 10px 5px black;
+}
+
+.next {
+	width: 128px;
+	height: 128px;
+	background-image: url('Images/next.png');
+	position: absolute;
+	top: 50%;
+	margin-top: -70px;
+	margin-left: 35px;
+	opacity: 0;
+}
+
+.prev {
+	width: 128px;
+	height: 128px;
+	background-image: url('Images/prev.png');
+	position: absolute;
+	top: 50%;
+	margin-top: -70px;
+	margin-left: -160px;
+	opacity: 0;
+}
+
+/* Akhir Overlay */
+
+/* Keyframes Animasi Overlay */
+
+@keyframes zoomdanfade {
+
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+}
+
+@keyframes slidedownfade {
+
+	0% {
+		transform: scale(0);
+		margin-top: -50px;
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1);
+		margin-top: 1;
+		opacity: 1;
+	}
+
+}
+
+@keyframes fade {
+
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+}
+
+/* Akhir Keyframes Animasi */

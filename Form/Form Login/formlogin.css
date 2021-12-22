@@ -1,0 +1,55 @@
+/* Utilities */
+
+@font-face {
+	font-family: 'montserratregular';
+	src: url('../../Source/Font/montserrat-regular-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+body {
+	margin-bottom: 100px;
+	background-image: url('Images/background.png');
+	font-family: 'montserratregular';
+}
+
+section {
+	margin: 100px;
+}
+
+section img {
+	width: 100px;
+	height: 100px;
+	margin: auto;
+}
+
+.card {
+	background-color: #441768;
+}
+
+button.utama {
+	background-color: #441768;
+	color: white;
+}
+
+button.utama:hover {
+	color: lightblue;
+}
+
+/* Akhir Utilities */
+
+/* Transform Animasi */
+
+.login {
+	opacity: 0;
+	transform: translate(0, -40px);
+	transition: 1s;
+}
+
+.login.muncul {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+/* Akhir Transform Animasi */
